@@ -1,14 +1,13 @@
-import Store from './store.js'
+import Store from "./store.js";
 
 // selectors
-const allBooksSection = document.querySelector('#all-books-section');
-const addBookSection = document.querySelector('#books-section');
-const contactSection = document.querySelector('#contact-section');
-const listNavLink = document.querySelector('.list-nav-link');
-const contactNavLink = document.querySelector('.contact-nav-link');
-const addNavLink = document.querySelector('.add-nav-link');
-const booksList = document.querySelector('.books-list');
-
+const allBooksSection = document.querySelector("#all-books-section");
+const addBookSection = document.querySelector("#books-section");
+const contactSection = document.querySelector("#contact-section");
+const listNavLink = document.querySelector(".list-nav-link");
+const contactNavLink = document.querySelector(".contact-nav-link");
+const addNavLink = document.querySelector(".add-nav-link");
+const booksList = document.querySelector(".books-list");
 
 export default class UI {
   static displayBooks() {
