@@ -15,6 +15,7 @@ const contactSection = document.querySelector("#contact-section");
 const listNavLink = document.querySelector(".list-nav-link");
 const addNavLink = document.querySelector(".add-nav-link");
 const contactNavLink = document.querySelector(".contact-nav-link");
+const currentDateTime = document.querySelector('.current-date-time');
 
 // Adding Book
 addBtn.addEventListener("click", () => {
