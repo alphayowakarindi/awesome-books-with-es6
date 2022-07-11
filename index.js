@@ -5,7 +5,6 @@ import Store from "./modules/store.js";
 import UI from "./modules/ui.js";
 import { DateTime } from "./modules/luxon.js";
 
-
 // Selectors
 const addBtn = document.querySelector(".add-btn");
 const booksList = document.querySelector(".books-list");
@@ -15,7 +14,7 @@ const contactSection = document.querySelector("#contact-section");
 const listNavLink = document.querySelector(".list-nav-link");
 const addNavLink = document.querySelector(".add-nav-link");
 const contactNavLink = document.querySelector(".contact-nav-link");
-const currentDateTime = document.querySelector('.current-date-time');
+const currentDateTime = document.querySelector(".current-date-time");
 
 // Adding Book
 addBtn.addEventListener("click", () => {
@@ -67,3 +66,14 @@ contactNavLink.addEventListener("click", (e) => {
   listNavLink.children[0].classList.remove("active");
   addNavLink.children[0].classList.remove("active");
 });
+
+// Set current date and time dynmaically
+const dt = DateTime.now();
+currentDateTime.innerHTML = `${dt.toLocaleString({
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+})}`;
