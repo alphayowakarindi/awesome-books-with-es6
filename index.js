@@ -1,6 +1,7 @@
 /* eslint-disable max-classes-per-file */
 // Modules
 import Book from './modules/book.js'
+import Store from './modules/store.js'
 
 // Selectors
 const addBtn = document.querySelector('.add-btn');
@@ -12,39 +13,6 @@ const listNavLink = document.querySelector('.list-nav-link');
 const addNavLink = document.querySelector('.add-nav-link');
 const contactNavLink = document.querySelector('.contact-nav-link');
 
-
-// LocalStorage Class
-
-class Store {
-  static getBooks() {
-    let books;
-
-    if (localStorage.getItem('books') === null) {
-      books = [];
-    } else {
-      books = JSON.parse(localStorage.getItem('books'));
-    }
-    return books;
-  }
-
-  static addBook(book) {
-    const books = Store.getBooks();
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
-  }
-
-  static removeBook(author) {
-    const books = Store.getBooks();
-
-    books.forEach((book, index) => {
-      if (book.author === author) {
-        books.splice(index, 1);
-      }
-    });
-
-    localStorage.setItem('books', JSON.stringify(books));
-  }
-}
 
 // ui operations
 
